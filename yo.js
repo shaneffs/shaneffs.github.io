@@ -10,6 +10,7 @@ $(".about").click( function(event){
     if ( $(this).hasClass("isDown") ) {
 		$(".filmb").stop().animate({left:"0%"}, 500);	    					             $(".photob").stop().animate({left:"50%"}, 500);
         $(".content").stop().animate({width:"0%", left:"50%"}, 500);
+        setTimeout( function(){ $(".content2").stop().animate({height:"0%"}, 0);}  , 500 );
         
                     
         $('.filmb').hover(function(){
@@ -36,6 +37,7 @@ $(".about").click( function(event){
         $(".filmb").stop().animate({left:"-20%"}, 500);
         $(".photob").stop().animate({left:"60%"}, 500);
         $(".content").stop().animate({width:"40%", left:"30%"}, 500);
+        $(".content2").stop().animate({height:"50%"}, 0);
         
         
         $('.filmb').hover(function(){
