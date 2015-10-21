@@ -26,7 +26,7 @@ html {
     position: fixed;
     width: 50%;
     height: 100%;
-    z-index: 2;
+    z-index: 3;
     overflow: hidden;
 }
 
@@ -128,7 +128,9 @@ html {
     left: 35%;
     font-family: 'Work Sans', sans-serif;
     font-size: 15px;
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    overflow: hidden;
 }
 
 .main{
@@ -140,6 +142,18 @@ html {
 }
 
 a:visited{
+    color: white;
+}
+
+a:link{
+    color: white;
+}
+
+a:hover{
+    color: white;
+}
+
+a:active{
     color: white;
 }
 
@@ -194,11 +208,6 @@ a:visited{
     z-index: 9;
     background: -webkit-linear-gradient(left, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
     opacity: 0;
-}
-
-.gif{
-    position: absolute;
-    width: 100%;
 }
 
 #display1{
