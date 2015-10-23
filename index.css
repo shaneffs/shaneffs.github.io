@@ -192,27 +192,26 @@ a:active{
 }
 
 .filmhome{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     left: -100%;
     z-index: 7;
-    overflow-y: scroll;
 }
 
 .filmback{
-    position: absolute;
-    width: 15%;
+    position: fixed;
+    width: 20%;
     height: 100%;
     z-index: 9;
-    left: 90%;
+    left: 80%;
     background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.6) 0%,rgba(0,0,0,0) 100%);
     opacity: 0;
 }
 
 .photoback{
     position: fixed;
-    width: 15%;
+    width: 20%;
     height: 100%;
     z-index: 9;
     background: -webkit-linear-gradient(left, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 100%);
@@ -222,7 +221,7 @@ a:active{
 #display1{
     position: fixed;
     width: 100%;
-    height: 15%;
+    height: 20%;
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 100%);
     opacity: 0;
     z-index: 8;
@@ -230,6 +229,27 @@ a:active{
 }
 
 #display{
+    position: fixed;
+    top: 80%;
+    width: 100%;
+    height: 20%;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    opacity: 0;
+    z-index: 8;
+    color: transparent;
+}
+
+#display3{
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 100%);
+    opacity: 0;
+    z-index: 8;
+    color: transparent;
+}
+
+#display2{
     position: fixed;
     top: 85%;
     width: 100%;
@@ -247,7 +267,7 @@ a:active{
 }
 
 .ha{
-    padding-top: 20%;
+    padding-top: 17%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -257,30 +277,39 @@ a:active{
     letter-spacing: -10px;
     text-align: center;
     color: rgba(255, 255, 255, 0.69);
-    background: rgba(144, 144, 144, 0.37);
+    background: rgba(144, 144, 144, 0.57);
     cursor: pointer;
     text-decoration:none;
     overflow: hidden;
 }
 
 .giftext{
-    padding-top: 20%;
+    padding-top: 22%;
     position: absolute;
     width: 100%;
     height: 100%;
     font-family: 'Work Sans', sans-serif;
-    font-size: 210px;
+    font-size: 100px;
     font-weight: 200;
-    letter-spacing: -10px;
+    letter-spacing: -5px;
     text-align: center;
     color: rgba(255, 255, 255, 0.69);
+    background: rgba(144, 144, 144, 0.37);
+    transition: background-color 1s ease;
     cursor: pointer;
     text-decoration:none;
     overflow: hidden;
+    margin-bottom: -22%;
+    text-shadow: 1px 3px 0 rgba(0,0,0,.2);
+}
+
+.giftext:hover{
+    background: rgba(255, 255, 255, 0);
 }
 
 .filmhome{
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .gif3 .filmslay{
@@ -289,6 +318,12 @@ a:active{
     min-width: 100%;
     width: auto;
     height: auto;
-    top: 50%; 
-    -webkit-transform: translate(0%, -50%); 
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%); 
+}
+
+.gif3{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
