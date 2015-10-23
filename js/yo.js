@@ -96,6 +96,42 @@ $(".about").click( function(event){
         $(".content").stop().animate({left:"100%"}, 300);
         $(".filmhome").stop().animate({left:"0%"}, 300);
         
+        
+        $('div.gif3').first();
+
+$('a.displa').on('click', function(e) {
+    e.preventDefault();
+
+      var t = $(this).text(),
+      that = $(this);
+
+    if (t === '1' && $('.current').next('div.gif3').length > 0) {
+        var $next = $('.current').next('.gif3');
+        var top = $next.offset().top;
+        
+        $('.current').removeClass('current');
+      
+        $('body').animate({
+          scrollTop: top     
+        }, function () {
+               $next.addClass('current');
+        });
+  } else if (t === '2' && $('.current').prev('div.gif3').length > 0) {
+        var $prev = $('.current').prev('.gif3');
+        var top = $prev.offset().top;
+        
+        $('.current').removeClass('current');
+      
+        $('body').animate({
+          scrollTop: top     
+        }, function () {
+               $prev.addClass('current');
+        });
+  } 
+});
+        
+        
+        
 });
     
         $(".filmback").click( function(){
@@ -106,6 +142,15 @@ $(".about").click( function(event){
         $(".filmhome").stop().animate({left:"-100%"}, 300);
         
 });
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     $(".photob").click( function(){
         $(".film").stop().animate({left:"-100%"}, 300);
@@ -196,5 +241,9 @@ $('a.display').on('click', function(e) {
 });
 
 
+
+    
+    
+    
     
 });
