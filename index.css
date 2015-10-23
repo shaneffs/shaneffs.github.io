@@ -123,7 +123,7 @@ html {
     position: fixed;
     text-align: center;
     width: 30%;
-    height: 50%;
+    height: 0%;
     top: 30%;
     left: 35%;
     font-family: 'Work Sans', sans-serif;
@@ -207,6 +207,7 @@ a:active{
     left: 80%;
     background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.6) 0%,rgba(0,0,0,0) 100%);
     opacity: 0;
+    left: -20%;
 }
 
 .photoback{
@@ -312,7 +313,7 @@ a:active{
     overflow-y: scroll;
 }
 
-.gif3 .filmslay{
+.gif3 .filmsla{
     position: absolute;
     min-height: 100%;
     min-width: 100%;
