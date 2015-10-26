@@ -22,6 +22,15 @@ html {
     background: #5c5c5c;
 }
 
+.loader {
+	position: fixed;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 9999;
+	background: url('img/photoslay.jpg') 0% 45% no-repeat;
+}
+
 .home{
     position: fixed;
     width: 100%;
