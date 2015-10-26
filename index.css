@@ -22,8 +22,14 @@ html {
     background: #5c5c5c;
 }
 
-.film{
+.home{
     position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.film{
+    position: absolute;
     width: 50%;
     height: 100%;
     z-index: 3;
@@ -56,7 +62,7 @@ html {
 }
 
 .photo{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -192,7 +198,7 @@ a:active{
 }
 
 .filmhome{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: -100%;
@@ -204,7 +210,6 @@ a:active{
     width: 20%;
     height: 100%;
     z-index: 9;
-    left: 80%;
     background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.6) 0%,rgba(0,0,0,0) 100%);
     opacity: 0;
     left: -20%;
@@ -234,27 +239,6 @@ a:active{
     top: 80%;
     width: 100%;
     height: 20%;
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
-    opacity: 0;
-    z-index: 8;
-    color: transparent;
-}
-
-#display3{
-    position: fixed;
-    width: 100%;
-    height: 15%;
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.37) 0%,rgba(0,0,0,0) 100%);
-    opacity: 0;
-    z-index: 8;
-    color: transparent;
-}
-
-#display2{
-    position: fixed;
-    top: 85%;
-    width: 100%;
-    height: 15%;
     background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
     opacity: 0;
     z-index: 8;
@@ -327,6 +311,42 @@ a:active{
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+.aboutline{
+    width:0px;
+    height:2px;
+    background: #000000;
+    margin: -7px auto auto auto;
+    border-radius: 10px;
+    opacity: 0.5;
+    -webkit-transition: width 0.8s height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.8s, height 0.8s;
+    -webkit-transition-timing-function:ease;
+}
+
+.filmline{
+    width:0px;
+    height:3px;
+    background: white;
+    margin: -80px auto auto auto;
+    border-radius: 10px;
+    opacity: 0.5;
+    -webkit-transition: width 0.8s height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.8s, height 0.8s;
+    -webkit-transition-timing-function:ease;
+}
+
+.photoline{
+    width:0px;
+    height:3px;
+    background: white;
+    margin: -80px auto auto auto;
+    border-radius: 10px;
+    opacity: 0.5;
+    -webkit-transition: width 0.8s height 0.8s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.8s, height 0.8s;
+    -webkit-transition-timing-function:ease;
 }
 
 .yzsb{

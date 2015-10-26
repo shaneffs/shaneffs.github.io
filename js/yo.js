@@ -8,8 +8,9 @@ $(document).ready(function(){
 $(".about").click( function(event){
 	event.preventDefault();
     if ( $(this).hasClass("isDown") ) {
-		$(".filmb").stop().animate({left:"0%"}, 500);	    					             $(".photob").stop().animate({left:"50%"}, 500);
+		$(".filmb").stop().animate({left:"0%"}, 500);	    					               $(".photob").stop().animate({left:"50%"}, 500);
         $(".content").stop().animate({width:"0%", left:"50%"}, 500);
+        $('.aboutline').stop().animate({width:"0px"}, 30);  
         setTimeout( function(){ $(".content2").stop().animate({height:"0%"}, 0);}  , 500 );
         
                     
@@ -36,7 +37,7 @@ $(".about").click( function(event){
         $(".photob").stop().animate({left:"60%"}, 500);
         $(".content").stop().animate({width:"40%", left:"30%"}, 500);
         $(".content2").stop().animate({height:"50%"}, 0);
-        
+        $('.aboutline').stop().animate({width:"80px"}, 50);
         
         $('.filmb').hover(function(){
         $('.film').stop().animate({width: '50%'}, 1000)
@@ -60,21 +61,35 @@ $(".about").click( function(event){
 	return false;
 });
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
             
         $('.filmb').hover(function(){
         $('.film').stop().animate({width: '70%'}, 1000)
         $('.photo .photob').stop().animate({width: '30%', left: '70%'}, 1000)
+        $('.filmline').stop().animate({width:"150px"}, 50);
     }, function(){
         $('.film').stop().animate({width: '50%'}, 1000)
         $('.photo .photob').stop().animate({width: '50%', left: '50%'}, 1000)
+        $('.filmline').stop().animate({width:"0px"}, 50);
   });
 
     $('.photob').hover(function(){
         $('.film').stop().animate({width: '30%'}, 1000)
         $('.photo .photob').stop().animate({width: '70%', left: '30%'}, 1000)
+        $('.photoline').stop().animate({width:"150px"}, 50);
     }, function(){
         $('.film').stop().animate({width: '50%'}, 1000)
         $('.photo .photob').stop().animate({width: '50%', left: '50%'}, 1000)
+        $('.photoline').stop().animate({width:"0px"}, 50);
   });
     
     
@@ -84,8 +99,7 @@ $(".about").click( function(event){
     
     
     $(".filmb").click( function(){
-        $(".film").stop().animate({left:"100%"}, 300);
-        $(".photo").stop().animate({left:"100%"}, 300);	
+        $(".home").stop().animate({left:"100%"}, 300);
         $(".about").stop().animate({left:"100%"}, 300);	
         $(".content").stop().animate({left:"100%"}, 300);
         $(".filmhome").stop().animate({left:"0%"}, 300);
@@ -96,12 +110,22 @@ $(".about").click( function(event){
 });
     
         $(".filmback").click( function(){
-        $(".film").stop().animate({left:"0%"}, 300);
-        $(".photo").stop().animate({left:"0%"}, 300);	
+        $(".home").stop().animate({left:"0%"}, 300);
         $(".about").stop().animate({left:"37.5%"}, 300);	
         $(".content").stop().animate({left:"50%", width:"0%"}, 300);
         $(".filmhome").stop().animate({left:"-100%"}, 300);
         $(".filmback").stop().animate({left:"-20%"}, 0);
+            
+            
+            
+        if($('.filmb').prop("disabled") != "disabled")
+    {
+        $('.filmb').prop("disabled", "disabled");
+        
+        setTimeout(function() {
+            $(".filmb").removeAttr("disabled");
+        }, 10000); // <-- your time (10 sec atm)
+    }
         
 });
     
@@ -111,8 +135,7 @@ $(".about").click( function(event){
     
     
     $(".photob").click( function(){
-        $(".film").stop().animate({left:"-100%"}, 300);
-        $(".photo").stop().animate({left:"-100%"}, 300);	
+        $(".home").stop().animate({left:"-100%"}, 300);	
         $(".about").stop().animate({left:"-100%"}, 300);	
         $(".content").stop().animate({left:"-100%"}, 300);
         $(".main").stop().animate({left:"0%"}, 300);
@@ -130,7 +153,7 @@ $('a.display').on('click', function(e) {
 
     if (t === '1' && $('.current').next('div.section').length > 0) {
         var $next = $('.current').next('.section');
-        var top = $next.offset().top;
+        var top = $next.offset().top + 100;
         
         $('.current').removeClass('current');
       
@@ -141,7 +164,7 @@ $('a.display').on('click', function(e) {
         });
   } else if (t === '2' && $('.current').prev('div.section').length > 0) {
         var $prev = $('.current').prev('.section');
-        var top = $prev.offset().top;
+        var top = $prev.offset().top + 100;
         
         $('.current').removeClass('current');
       
@@ -156,8 +179,7 @@ $('a.display').on('click', function(e) {
 });
     
     $(".photoback").click( function(){
-        $(".film").stop().animate({left:"0%"}, 300);
-        $(".photo").stop().animate({left:"0%"}, 300);	
+        $(".home").stop().animate({left:"0%"}, 300);
         $(".about").stop().animate({left:"37.5%"}, 300);	
         $(".content").stop().animate({left:"50%", width:"0%"}, 300);
         $(".main").stop().animate({left:"100%"}, 300);
@@ -201,9 +223,4 @@ $('a.display').on('click', function(e) {
 });
 
 
-
-    
-    
-    
-    
 });
