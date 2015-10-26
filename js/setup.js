@@ -5,7 +5,7 @@ $(document).ready(function(){
 		qstrings: {
 			id: '132707772@N07'
 		},
-		itemTemplate: '<li><img src="{{image}}" alt="{{title}}" /><div>{{title}}</div></li>'
+		itemTemplate: '<li><img src="{{image_b}}" alt="{{title}}" /></li>'
 	}, function(data) {
 		$('#cycle div').hide();
 		$('#cycle').cycle({
@@ -19,7 +19,7 @@ $(document).ready(function(){
 		qstrings: {
 			id: '132707772@N07'
 		},
-		itemTemplate: '<li><img src="{{image}}" alt="{{title}}" /><div>{{title}}</div></li>'
+		itemTemplate: '<li><img src="{{image_b}}" alt="{{title}}" /></li>'
 	}, function(data) {
 		$('#cycle2 div').hide();
 		$('#cycle2').cycle({
