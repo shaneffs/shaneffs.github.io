@@ -11,6 +11,11 @@ $(document).ready(function(){
 		$('#cycle').cycle({
             fx:     'fade',
 			timeout: 3000,
+            
+            
+            
+            
+            
 		});
 	});
     
