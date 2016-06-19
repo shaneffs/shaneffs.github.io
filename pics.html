@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Shane Fu</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/urku-ico.svg">
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/urku.css">
+    <script src="assets/js/jquery-3.0.0.min.js"></script>
+  </head>
+  <body class="top-fixed">
+    <header class="ae-container-fluid ae-container-fluid--full rk-header ">
+      <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid rk-topbar">
+        <h1 class="rk-logo"><a href="index.html">SHANE FU</a></h1>
+        <nav class="rk-navigation">
+          <ul class="rk-menu">
+            <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+            </li>
+            <li class="active rk-menu__item"><a href="pics.html" class="rk-menu__link">Works</a>
+              <nav class="rk-menu__sub">
+                <ul class="rk-container">
+                  <li class="active rk-menu__item"><a href="pics.html" class="rk-menu__link">Pics</a></li>
+                  <li class="rk-menu__item"><a href="vids.html" class="rk-menu__link">Vids</a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">About</a>
+            </li>
+            <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">Blog</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+      
+      
+      
+    <section class="ae-container-fluid rk-main">
+        
+      </section>
+        
+        
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+            <div class="photocontainer">
+                <ul class="photos-set ae-masonry ae-masonry-sm-1 ae-masonry-md-2 ae-masonry-lg-3 ae-masonry-xl-3" style="padding-left: 0px;" data-clearing></ul> 
+            </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <footer class="ae-container-fluid rk-footer ">
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center"><a href="https://twitter.com/shaneeefu" class="rk-social-btn ">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+            </svg></a>
+            <a href="https://www.flickr.com/photos/shanefu" class="rk-social-btn ">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-flickr"></use>
+            </svg></a>
+            <a href="https://www.instagram.com/shaneffs/" class="rk-social-btn ">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
+            </svg></a></div>
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+          <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">shanef@foxmail.com </a></span></p>
+        </div>
+      </div>
+    </footer>
+      
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+      
+   <script src="assets/js/flickr.js"></script>
+    <script>
+        $('.photos-set').flickrPhotoStream({
+            id: '132707772@N07',
+            container: '<li class="photos-set-item" />',
+            cssClass: 'photos-set-link'
+        }).done(function () {
+            $(document).foundation();
+        }).fail(function () {
+            $(this).append("<p>Désolé, nous n'avons pas pu charger les photos. Vous pouvez tenter de recharger la page.</p>");
+        });
+        
+        $('.photos-set').masonry({
+  // options
+  itemSelector: '.photos-set-item',
+  columnWidth: 200
+});
+    </script>
+  </body>
+</html>
