@@ -8,69 +8,9 @@
     <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
     <link rel="stylesheet" href="assets/css/urku.css">
-    <link rel="stylesheet" href="assets/css/lightbox.min.css">
     <script src="assets/js/jquery-3.0.0.min.js"></script>
-    <script>
-
-        
-function determineCountry(data){
-   switch(data.address.country_code){
-      case "CN" :
-         
-           
-           
-           function displayOverlay(text) {
-    $("<div id='overlay'><a>" + text + "</a></div>").css({
-        "position": "fixed",
-        "top": "0px",
-        "left": "0px",
-        "width": "100%",
-        "height": "100%",
-        "background-color": "rgba(0, 0, 0, 0.73)",
-        "z-index": "10000",
-        "text-align": "center",
-        "color": "#fff",
-        "font-size": "40px",
-        "font-weight": "bold",
-        "cursor": "not-allowed"
-    }).appendTo("body");
-}
-
-function removeOverlay() {
-    $("#overlay").fadeOut();
-    setTimeout(function() {
-    $("#overlay").remove();
-        }, 2000);
-}
-
-$(function () {
-    $("body").click(function () {
-        if ($("#overlay").length > 0) {
-            removeOverlay();
-        }
-    });
-    displayOverlay("亲们，如果您是从国内访问此网站而且没有VPN的帮助，大部分内容会无法显示。");
-});
-           
-           
-           
-           
-           
-           
-           
-           
-           
-      break;
-   }    
-}
-</script>
-<script type="text/javascript" src="http://api.wipmania.com/jsonp?callback=determineCountry"></script>
   </head>
   <body class="top-fixed">
-      
-      
-      
-      
     <header class="ae-container-fluid ae-container-fluid--full rk-header ">
       <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
       <label for="mobile-menu">
@@ -88,7 +28,7 @@ $(function () {
         <h1 class="rk-logo"><a href="index.html">SHANE FU</a></h1>
         <nav class="rk-navigation">
           <ul class="rk-menu">
-            <li class="active rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+            <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
             </li>
             <li class="rk-menu__item"><a href="pics.html" class="rk-menu__link">Works</a>
               <nav class="rk-menu__sub">
@@ -100,7 +40,7 @@ $(function () {
             </li>
             <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">About</a>
             </li>
-            <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">Blog</a>
+            <li class="active rk-menu__item"><a href="blog.html" class="rk-menu__link">Blog</a>
             </li>
           </ul>
         </nav>
@@ -109,29 +49,81 @@ $(function () {
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     <section class="ae-container-fluid rk-main">
-
-      </section>
+      <input type="radio" name="layout-ctrl" checked id="layout-base" class="layout-ctrl-input">
+      <div class="ae-container-fluid rk-layout-ctrl-cont">
+        <label for="layout-base" class="rk-layout-ctrl">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-view-full"></use>
+          </svg>
+        </label>
+      </div>
+      <input type="radio" name="layout-ctrl" id="layout-grid" class="layout-ctrl-input">
+      <div class="ae-container-fluid rk-layout-ctrl-cont">
+        <label for="layout-grid" class="rk-layout-ctrl">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-view-alt"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="rk-layout-ctrl-mobile  layout-blog">
+        <svg viewBox="0 0 9 9" class="layout-mob-1">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-2">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-3">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+        <svg viewBox="0 0 9 9" class="layout-mob-4">
+          <rect width="100%" height="100%" fill="currentColor"></rect>
+        </svg>
+      </div>
         
         
-        
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-            <div class="photocontainer">
-                <ul class="photos-set ae-masonry ae-masonry-sm-1 ae-masonry-md-2 ae-masonry-lg-3 ae-masonry-xl-3" style="padding-left: 0px;" data-clearing></ul> 
+      <section class="ae-container-fluid ae-container-fluid--inner rk-blog">
+        <div class="rk-blog__items">
+          <div class="rk-blog__item">
+            <div class="post-img post-5 rk-landscape-alt rk-toportrait">
+              <div class="item-meta">
+                <p><a href="#" class="arrow-button">Read More<span class="arrow-cont">
+                      <svg>
+                        <use xlink:href="assets/img/symbols.svg#arrow"></use>
+                      </svg></span></a></p>
+              </div>
             </div>
-      
-      
-      
+            <div class="blog-info">
+              <h2 class="blog-info__title"> <a href="#"> First Entry</a></h2>
+              <h5 class="blog-info__author">By <a href="#" class="ae-u-bolder">Shane</a></h5>
+              <p class="blog-info__excerpt">Honestly idk what the fuck to say tho</p>
+            </div>
+            <div class="blog-meta"><span class="ae-kappa ae-u-bold blog-meta__date">06 19 2016</span></div>
+          </div>
+         
+        </div>
+      </section>
+      <div class="ae-container-fluid au-pb-4 group-buttons"><a href="#0" class="arrow-button arrow-button--reverse arrow-button--center">Older Posts
+          <div class="arrow-cont arrow-cont-rev">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#arrow"></use>
+            </svg>
+          </div></a></div>
+    </section>
       
       
       
@@ -159,36 +151,7 @@ $(function () {
         </div>
       </div>
     </footer>
-      
     <script src="assets/js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-      <script src="assets/js/lightbox.js"></script>
-   <script src="assets/js/flickr.js"></script>
-      
-    <script>
-        $('.photos-set').flickrPhotoStream({
-            id: '132707772@N07',
-            container: '<li class="photos-set-item" />',
-            cssClass: 'photos-set-link'
-        }).done(function () {
-            $(document).foundation();
-        }).fail(function () {
-            $(this).append("<p>Désolé, nous n'avons pas pu charger les photos. Vous pouvez tenter de recharger la page.</p>");
-        });
-        
-        $('.photos-set').masonry({
-  // options
-  itemSelector: '.photos-set-item',
-  columnWidth: 200
-});
-        
-        
-        
-        
-        
-        
-        
-        
-    </script>
   </body>
 </html>

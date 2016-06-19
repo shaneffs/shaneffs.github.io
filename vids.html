@@ -8,69 +8,9 @@
     <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
     <link rel="stylesheet" href="assets/css/urku.css">
-    <link rel="stylesheet" href="assets/css/lightbox.min.css">
     <script src="assets/js/jquery-3.0.0.min.js"></script>
-    <script>
-
-        
-function determineCountry(data){
-   switch(data.address.country_code){
-      case "CN" :
-         
-           
-           
-           function displayOverlay(text) {
-    $("<div id='overlay'><a>" + text + "</a></div>").css({
-        "position": "fixed",
-        "top": "0px",
-        "left": "0px",
-        "width": "100%",
-        "height": "100%",
-        "background-color": "rgba(0, 0, 0, 0.73)",
-        "z-index": "10000",
-        "text-align": "center",
-        "color": "#fff",
-        "font-size": "40px",
-        "font-weight": "bold",
-        "cursor": "not-allowed"
-    }).appendTo("body");
-}
-
-function removeOverlay() {
-    $("#overlay").fadeOut();
-    setTimeout(function() {
-    $("#overlay").remove();
-        }, 2000);
-}
-
-$(function () {
-    $("body").click(function () {
-        if ($("#overlay").length > 0) {
-            removeOverlay();
-        }
-    });
-    displayOverlay("亲们，如果您是从国内访问此网站而且没有VPN的帮助，大部分内容会无法显示。");
-});
-           
-           
-           
-           
-           
-           
-           
-           
-           
-      break;
-   }    
-}
-</script>
-<script type="text/javascript" src="http://api.wipmania.com/jsonp?callback=determineCountry"></script>
   </head>
   <body class="top-fixed">
-      
-      
-      
-      
     <header class="ae-container-fluid ae-container-fluid--full rk-header ">
       <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
       <label for="mobile-menu">
@@ -88,13 +28,13 @@ $(function () {
         <h1 class="rk-logo"><a href="index.html">SHANE FU</a></h1>
         <nav class="rk-navigation">
           <ul class="rk-menu">
-            <li class="active rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+            <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
             </li>
-            <li class="rk-menu__item"><a href="pics.html" class="rk-menu__link">Works</a>
+            <li class="active rk-menu__item"><a href="pics.html" class="rk-menu__link">Works</a>
               <nav class="rk-menu__sub">
                 <ul class="rk-container">
                   <li class="rk-menu__item"><a href="pics.html" class="rk-menu__link">Pics</a></li>
-                  <li class="rk-menu__item"><a href="vids.html" class="rk-menu__link">Vids</a></li>
+                  <li class="active rk-menu__item"><a href="vids.html" class="rk-menu__link">Vids</a></li>
                 </ul>
               </nav>
             </li>
@@ -110,7 +50,7 @@ $(function () {
       
       
     <section class="ae-container-fluid rk-main">
-
+        
       </section>
         
         
@@ -125,13 +65,11 @@ $(function () {
       
       
       
-      
-            <div class="photocontainer">
-                <ul class="photos-set ae-masonry ae-masonry-sm-1 ae-masonry-md-2 ae-masonry-lg-3 ae-masonry-xl-3" style="padding-left: 0px;" data-clearing></ul> 
-            </div>
+ <div class="ae-grid ae-grid--collapse">     
+<iframe style="min-height:100%" class="ae-grid__item item-lg-3 au-xs-3" width="50%" src="https://www.youtube.com/embed/FQLETi1gloQ" frameborder="0" allowfullscreen="no"></iframe>
       
       
-      
+      </div>
       
       
       
@@ -162,9 +100,8 @@ $(function () {
       
     <script src="assets/js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-      <script src="assets/js/lightbox.js"></script>
-   <script src="assets/js/flickr.js"></script>
       
+   <script src="assets/js/flickr.js"></script>
     <script>
         $('.photos-set').flickrPhotoStream({
             id: '132707772@N07',
@@ -181,14 +118,6 @@ $(function () {
   itemSelector: '.photos-set-item',
   columnWidth: 200
 });
-        
-        
-        
-        
-        
-        
-        
-        
     </script>
   </body>
 </html>
