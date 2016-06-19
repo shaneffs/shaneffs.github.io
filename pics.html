@@ -7,10 +7,83 @@
     <link rel="icon" type="image/svg+xml" href="assets/img/urku-ico.svg">
     <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
-    <link rel="stylesheet" href="assets/css/urku.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Rubik:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
     <script src="assets/js/jquery-3.0.0.min.js"></script>
+    <script>
+
+        
+function determineCountry(data){
+   switch(data.address.country_code){
+      case "CN" :
+         
+           
+           
+           function displayOverlay(text) {
+    $("<div id='overlay'><a>" + text + "</a></div>").css({
+        "position": "fixed",
+        "top": "0px",
+        "left": "0px",
+        "width": "100%",
+        "height": "100%",
+        "background-color": "rgba(0, 0, 0, 0.8)",
+        "z-index": "10000",
+        "text-align": "center",
+        "color": "#fff",
+        "font-size": "40px",
+        "font-weight": "bold",
+        "cursor": "pointer",
+    }).appendTo("body");
+};
+
+function removeOverlay() {
+    $("#overlay").fadeOut();
+    setTimeout(function() {
+    $("#overlay").remove();
+        }, 2000);
+};
+
+$(function () {
+    $("body").click(function () {
+        if ($("#overlay").length > 0) {
+            removeOverlay();
+        }
+    });
+    displayOverlay("亲，如果您是从国内访问此网站而且没有VPN的帮助，大部分内容会无法显示。");
+});
+           
+           
+           
+           
+           
+           
+           
+           
+           
+      break;
+   }    
+}
+</script>
+<script type="text/javascript" src="http://api.wipmania.com/jsonp?callback=determineCountry"></script>
+      
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61554128-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+      
   </head>
   <body class="top-fixed">
+      
+      
+      
+      
     <header class="ae-container-fluid ae-container-fluid--full rk-header ">
       <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
       <label for="mobile-menu">
@@ -25,22 +98,22 @@
         </svg>
       </label>
       <div class="ae-container-fluid rk-topbar">
-        <h1 class="rk-logo"><a href="index.html">SHANE FU</a></h1>
+        <h1 class="rk-logo"><a href="shanefu.com">SHANE FU</a></h1>
         <nav class="rk-navigation">
           <ul class="rk-menu">
-            <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Home</a>
+            <li class="rk-menu__item"><a href="index" class="rk-menu__link">Home</a>
             </li>
-            <li class="active rk-menu__item"><a href="pics.html" class="rk-menu__link">Works</a>
+            <li class="rk-menu__item"><a href="pics" class="rk-menu__link">Works</a>
               <nav class="rk-menu__sub">
                 <ul class="rk-container">
-                  <li class="active rk-menu__item"><a href="pics.html" class="rk-menu__link">Pics</a></li>
-                  <li class="rk-menu__item"><a href="vids.html" class="rk-menu__link">Vids</a></li>
+                  <li class="active rk-menu__item"><a href="pics" class="rk-menu__link">Pics</a></li>
+                  <li class="rk-menu__item"><a href="vids" class="rk-menu__link">Vids</a></li>
                 </ul>
               </nav>
             </li>
-            <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">About</a>
+            <li class="rk-menu__item"><a href="about" class="rk-menu__link">About</a>
             </li>
-            <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">Blog</a>
+            <li class="rk-menu__item"><a href="blog" class="rk-menu__link">Blog</a>
             </li>
           </ul>
         </nav>
@@ -50,7 +123,7 @@
       
       
     <section class="ae-container-fluid rk-main">
-        
+
       </section>
         
         
@@ -102,8 +175,9 @@
       
     <script src="assets/js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-      
+      <script src="assets/js/lightbox.js"></script>
    <script src="assets/js/flickr.js"></script>
+      
     <script>
         $('.photos-set').flickrPhotoStream({
             id: '132707772@N07',
@@ -120,6 +194,14 @@
   itemSelector: '.photos-set-item',
   columnWidth: 200
 });
+        
+        
+        
+        
+        
+        
+        
+        
     </script>
   </body>
 </html>
