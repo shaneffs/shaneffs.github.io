@@ -10,10 +10,10 @@
 
         return $.getJSON(url).done(function (data) {
             $.each(data.items, function (index, item) {
-                var link = item.media.m.replace('_m', '_c');
+                var link = item.media.m.replace('_m', '_b');
 
                 $("<img />")
-                    .attr("src", item.media.m.replace('_m', '_c'))
+                    .attr("src", item.media.m.replace('_m', '_b'))
                     .appendTo($el)
                     .wrap(options.container || '')
                     .wrap([
