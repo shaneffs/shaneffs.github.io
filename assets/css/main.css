@@ -42,7 +42,7 @@ font-family: "Microsoft YaHei";
 	-webkit-border-radius: 125px;
 	-moz-border-radius: 125px;
 overflow: hidden;
-position: relative; z-index: 9;
+position: relative; z-index: .5;
 left: 50%;
 transform: translateX(-50%)}
 
