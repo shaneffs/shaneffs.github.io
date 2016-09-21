@@ -2144,7 +2144,7 @@ transform: translateX(-50%)}
   color: #a0a0a0;
 }
 .rk-menu__link {
-  padding-bottom: 4.2rem;
+  padding-bottom: 3rem;
 }
 .rk-menu__sub {
   background-color: white;
@@ -2176,7 +2176,7 @@ transform: translateX(-50%)}
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: .05rem .5rem;
+  padding: .1rem 6.5rem;
   max-width: 101rem;
 }
 .rk-menu__item:hover > .rk-menu__sub {
