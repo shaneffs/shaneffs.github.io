@@ -13,8 +13,27 @@
     <script src="assets/js/jquery-3.0.0.min.js"></script>
     <script src="assets/js/typed.js"></script>
     <script>
-  if(window.innerWidth >= 0) {
+if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
+       
+       
   $(function(){
+      $(".404").typed({
+        strings: ["welcome_to_Shane's_file_server\\"],
+        typeSpeed: 25,
+          backDelay: 2000,
+          loop: false,
+      });
+  });
+      
+      $(".welcome").ready(function() {
+      $(".welcome").delay(3000).fadeOut('slow');
+          });
+   }else{
+       
+       
+       
+       
+         $(function(){
       $(".404").typed({
         strings: ["welcome_to_Shane's_file_server\\", "click_to_enter\\"],
         typeSpeed: 25,
@@ -28,6 +47,11 @@
       $(document).click(function(e){
       $(".welcome").fadeOut('slow', function(){});
         });
+       
+       
+       
+       
+
    }
     </script>
     <script>
