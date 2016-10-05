@@ -8,30 +8,66 @@
     <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/lightbox.min.css">
     <link href='https://fonts.googleapis.com/css?family=Rubik:300,400' rel='stylesheet' type='text/css'>
     <script src="assets/js/jquery-3.0.0.min.js"></script>
-    <script src="assets/js/typed.js"></script>
-    
-    <script>
-  
-  $(function(){
-      $(".404").typed({
-        strings: ["wrong_path\\", "go_back\\"],
-        typeSpeed: 30,
-        backSpeed: 20,
-          backDelay: 1000,
-          loop: true,
-      });
-  });
-    </script>
+        <script>
+
+        
+function determineCountry(data){
+   switch(data.address.country_code){
+      case "CN" :
+         
+           
+           
+           function displayOverlay(text) {
+    $("<div id='overlay'><a>" + text + "</a></div>").css({
+        "position": "fixed",
+        "top": "0px",
+        "left": "0px",
+        "width": "100%",
+        "height": "100%",
+        "background-color": "rgba(0, 0, 0, 0.8)",
+        "z-index": "10000",
+        "text-align": "center",
+        "color": "#fff",
+        "font-size": "40px",
+        "font-weight": "bold",
+        "cursor": "pointer",
+    }).appendTo("body");
+};
+
+function removeOverlay() {
+    $("#overlay").fadeOut();
+    setTimeout(function() {
+    $("#overlay").remove();
+        }, 2000);
+};
+
+$(function () {
+    $("body").click(function () {
+        if ($("#overlay").length > 0) {
+            removeOverlay();
+        }
+    });
+    displayOverlay("亲，如果您是从国内访问此网站而且没有VPN的帮助，大部分内容会无法显示。");
+});
+           
+           
+           
+           
+           
+           
+           
+           
+           
+      break;
+   }    
+}
+</script>
+<script type="text/javascript" src="http://api.wipmania.com/jsonp?callback=determineCountry"></script>
   </head>
   <body class="top-fixed">
-      
-      
-      
-      
-       <header class="ae-container-fluid ae-container-fluid--full rk-header ">
+    <header class="ae-container-fluid ae-container-fluid--full rk-header ">
       <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
       <label for="mobile-menu">
         <svg>
@@ -55,7 +91,7 @@
                 <ul class="rk-container">
                   <li class="rk-menu__item"><a href="pics" class="rk-menu__link">Pics</a></li>
                   <li class="rk-menu__item"><a href="vids" class="rk-menu__link">Vids</a></li>
-                <li class="rk-menu__item"><a href="ft201" class="rk-menu__link">ft201</a></li>
+                    <li class="active rk-menu__item"><a href="ft201" class="rk-menu__link">ft201</a></li>
                 </ul>
               </nav>
             </li>
@@ -72,37 +108,48 @@
       
       
     <section class="ae-container-fluid rk-main">
-
+        
+        
+        
+      <div style="font-family:rubik; font-weight:300;" class="ae-grid ae-grid--collapse">
+          
+          
+          
+          <div class="ae-grid__item item-lg-6 au-xs-ta-center">
+              <div style="overflow:hidden;height:405px;width:720px;max-width:100%;max-height:100%;display:block;">
+                  <div id="youtube_canvas" style="height:100%;width:100%;max-width:100%"><iframe style="height:100%;width:100%;max-width:100%;border:0;" frameborder="0" src="https://www.youtube.com/embed/1Q55PBkx3SI?hl=en&amp;autoplay=0&amp;cc_load_policy=0&amp;loop=0&amp;iv_load_policy=0&amp;fs=1&amp;showinfo=0"></iframe></div><style>#youtube_canvas img{max-width:none!important;background:none!important}</style></div>
+          </div>
+          
+          
+          
+          <div class="ae-grid__item item-lg-6 au-xs-ta-left">
+              <p style="margin-left:5%;"><b>Photo montage</b> <br>First assignment for FT201<br>Created on 10/01</p>
+          </div>
+          
+          
+          
+      </div>
+        
+        
+        
+        
+        
+        
+        
       </section>
         
         
         
       
-      <a style="font-size:45px;font-family:rubik;line-height:5;padding:5% 10%;" href="index.html">
-              
-              
-              
-              
-              
-              
-             C:\<div class="404"  style="display:inline-block;"></div>
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              </a>
       
       
+      
+      
+      
+      
+      
+      
+
       
       
       
@@ -133,11 +180,24 @@
       
     <script src="assets/js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-
+      
+   <script src="assets/js/flickr.js"></script>
+    <script>
+        $('.photos-set').flickrPhotoStream({
+            id: '132707772@N07',
+            container: '<li class="photos-set-item" />',
+            cssClass: 'photos-set-link'
+        }).done(function () {
+            $(document).foundation();
+        }).fail(function () {
+            $(this).append("<p>Désolé, nous n'avons pas pu charger les photos. Vous pouvez tenter de recharger la page.</p>");
+        });
         
-        
-        
-        
+        $('.photos-set').masonry({
+  // options
+  itemSelector: '.photos-set-item',
+  columnWidth: 200
+});
     </script>
   </body>
 </html>
