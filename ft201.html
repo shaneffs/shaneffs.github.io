@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Rubik:300,400' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="assets/css/lightbox.min.css">
     <script src="assets/js/jquery-3.0.0.min.js"></script>
         <script>
 
@@ -123,7 +124,7 @@ $(function () {
           
           
           <div class="ae-grid__item item-lg-6 au-xs-ta-left">
-              <p style="margin-left:5%;"><b>Photo montage</b> <br>First assignment for FT201<br>Created on 10/01</p>
+              <p style="margin-left:5%;margin-top:5%;"><b>Photo Montage</b> <br>First assignment for FT201<br>Created on 10/01</p>
           </div>
           
           
@@ -131,9 +132,24 @@ $(function () {
       </div>
         
         
-        
-        
-        
+        <div style="font-family:rubik; font-weight:300;" class="ae-grid ae-grid--collapse">
+              
+            <div class="ae-grid__item item-lg-6 au-xs-ta-left">
+              <p style="margin-left:60%;margin-top:40%;"><b>Photo Portraits</b> <br>Six portraits of Jackie<br>Created on 10/16</p>
+          </div>
+            
+            <div class="ae-grid__item item-lg-6 au-xs-ta-center">
+                <ul class="photos-set ae-masonry ae-masonry-sm-1 ae-masonry-md-2 ae-masonry-lg-2 ae-masonry-xl-2" style="padding-left: 0px;" data-clearing>
+                <li><a href="img/cold%20colors.jpg" data-lightbox="image-1" data-title="cold colors"><img src="img/cold%20colors.jpg"></a></li>
+                    <li><a href="img/dimension.jpg" data-lightbox="image-1" data-title="dimension"><img src="img/dimension.jpg"></a></li>
+                    <li><a href="img/edges.jpg" data-lightbox="image-1" data-title="edges"><img src="img/edges.jpg"></a></li>
+                    <li><a href="img/opposite%20colors.jpg" data-lightbox="image-1" data-title="opposite colors"><img src="img/opposite%20colors.jpg"></a></li>
+                    <li><a href="img/unnatural.jpg" data-lightbox="image-1" data-title="unnatural"><img src="img/unnatural.jpg"></a></li>
+                    <li><a href="img/detail.jpg" data-lightbox="image-1" data-title="detail"><img src="img/detail.jpg"></a></li>
+                </ul> 
+            </div>
+      
+          </div>
         
         
       </section>
@@ -180,24 +196,7 @@ $(function () {
       
     <script src="assets/js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
-      
-   <script src="assets/js/flickr.js"></script>
-    <script>
-        $('.photos-set').flickrPhotoStream({
-            id: '132707772@N07',
-            container: '<li class="photos-set-item" />',
-            cssClass: 'photos-set-link'
-        }).done(function () {
-            $(document).foundation();
-        }).fail(function () {
-            $(this).append("<p>Désolé, nous n'avons pas pu charger les photos. Vous pouvez tenter de recharger la page.</p>");
-        });
-        
-        $('.photos-set').masonry({
-  // options
-  itemSelector: '.photos-set-item',
-  columnWidth: 200
-});
-    </script>
+      <script src="assets/js/lightbox.js"></script>
+  
   </body>
 </html>
