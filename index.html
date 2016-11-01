@@ -12,23 +12,9 @@
     <link rel="stylesheet" href="assets/css/lightbox.min.css">
     <script src="assets/js/jquery-3.0.0.min.js"></script>
     <script src="assets/js/typed.js"></script>
+    <script src="assets/js/parallax.js"></script>
+
     <script>
-if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
-       
-       
-  $(function(){
-      $(".404").typed({
-        strings: ["welcome_to_Shane's_file_server\\"],
-        typeSpeed: 25,
-          backDelay: 2000,
-          loop: false,
-      });
-  });
-      
-      $(".welcome").ready(function() {
-      $(".welcome").delay(3000).fadeOut('slow');
-          });
-   }else{
        
        
        
@@ -48,11 +34,7 @@ if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
       $(".welcome").fadeOut('slow', function(){});
         });
        
-       
-       
-       
 
-   }
     </script>
     <script>
 
@@ -120,7 +102,7 @@ $(function () {
       
       
       
-          <a class="welcome" style="position:fixed;z-index:1000;width:100%;height:100%;background:white;font-size:35px;font-family:rubik;line-height:2.5;padding:3% 7%;font-size: 3.7vw; ">
+          <a class="welcome" style="position:fixed;z-index:1000;width:100%;height:100%;background:white;font-size:35px;font-family:rubik;line-height:2.5;padding:3% 7%;font-size: 3.7vw;cursor:pointer">
               
               
               
@@ -187,6 +169,10 @@ $(function () {
       
     <section class="ae-container-fluid rk-main">
 
+        
+        
+        
+        
       </section>
         
         
@@ -196,15 +182,19 @@ $(function () {
       
       
       
+        
       
+            <div class="parallax-viewport" id="parallax" style="position:fixed;min-width:100vw;min-height:62.5vw;left: 50%;top: 50%;transform: translate(-50%, -50%);overflow: hidden;">
+                
+                
+            <img class="parallax-layer" src="assets/img/Untitled-5.png" alt="" style="position:absolute; width:92%; height:92%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-4.png" alt="" style="position:absolute; width:94%; height:94%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-3.png" alt="" style="position:absolute; width:96%; height:96%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-2.png" alt="" style="position:absolute; width:98%; height:98%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-1.png" alt="" style="position:absolute; width:100%; height:100%;"/>
       
-      
-      
-      
-      
-            <div class="photocontainer">
-                <ul class="photos-set ae-masonry ae-masonry-sm-1 ae-masonry-md-2 ae-masonry-lg-3 ae-masonry-xl-3" style="padding-left: 0px;" data-clearing></ul> 
             </div>
+        
       
       
       
@@ -216,7 +206,9 @@ $(function () {
       
       
       
-    <footer class="ae-container-fluid rk-footer ">
+      
+      
+    <footer class="ae-container-fluid rk-footer" style="margin-top:40%;">
       <div class="ae-grid ae-grid--collapse">
         <div class="ae-grid__item item-lg-4 au-xs-ta-center"><a href="https://twitter.com/shaneeefu" class="rk-social-btn ">
             <svg>
@@ -241,30 +233,31 @@ $(function () {
       <script src="assets/js/lightbox.js"></script>
    <script src="assets/js/flickr.js"></script>
       
-    <script>
-        $('.photos-set').flickrPhotoStream({
-            id: '132707772@N07',
-            container: '<li class="photos-set-item" />',
-            cssClass: 'photos-set-link'
-        }).done(function () {
-            $(document).foundation();
-        }).fail(function () {
-            $(this).append("<p>Désolé, nous n'avons pas pu charger les photos. Vous pouvez tenter de recharger la page.</p>");
-        });
-        
-        $('.photos-set').masonry({
-  // options
-  itemSelector: '.photos-set-item',
-  columnWidth: 200
-});
-        
-        
-        
-        
-        
-        
-        
-        
+      <script>
+      jQuery(document).ready(function(){
+    jQuery('#parallax .parallax-layer')
+    .parallax({
+      mouseport: jQuery('.parallax-layer')
+    });
+  });
+      
     </script>
+    <script>
+      
+      
+       
+       var cookie = document.cookie;
+if (cookie.indexOf('visited=', 0) == -1) {
+    var expiration = new Date();
+    expiration.setDate(expiration.getDate()+1);
+    document.cookie = 'visited=1;expires=' + expiration + ';path=/';
+
+    var element = document.getElementById('welcome');
+    element.style.display = 'block';
+}
+       
+      
+      
+      </script>
   </body>
 </html>
