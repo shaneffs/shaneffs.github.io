@@ -14,7 +14,28 @@
     <script src="assets/js/typed.js"></script>
     <script src="assets/js/parallax.js"></script>
 
+    <script>
+       
+       
+       
+       
+         $(function(){
+      $(".404").typed({
+        strings: ["welcome_to_Shane's_file_server\\", "click_to_enter\\"],
+        typeSpeed: 25,
+        backSpeed: 20,
+          backDelay: 1000,
+          loop: true,
+      });
+  });
+      
+      
+      $(document).click(function(e){
+      $(".welcome").fadeOut('slow', function(){});
+        });
+       
 
+    </script>
     <script>
 
         
@@ -81,7 +102,33 @@ $(function () {
       
       
       
-    <header class="ae-container-fluid ae-container-fluid--full rk-header" style="background-color:rgba(255, 255, 255, 0.5)">
+          <a class="welcome" style="position:fixed;z-index:1000;width:100%;height:100%;background:white;font-size:35px;font-family:rubik;line-height:2.5;padding:3% 7%;font-size: 3.7vw;cursor:pointer">
+              
+              
+              
+              
+              
+              
+            C:\<div class="404"  style="display:inline;"></div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              </a>
+      
+      
+      
+    <header class="ae-container-fluid ae-container-fluid--full rk-header ">
       <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
       <label for="mobile-menu">
         <svg>
@@ -101,7 +148,7 @@ $(function () {
             <li class="active rk-menu__item"><a href="index" class="rk-menu__link">Home</a>
             </li>
             <li class="rk-menu__item"><a href="pics" class="rk-menu__link">Works</a>
-              <nav class="rk-menu__sub"  style="background-color:rgba(255, 255, 255, 0.5)">
+              <nav class="rk-menu__sub">
                 <ul class="rk-container">
                   <li class="rk-menu__item"><a href="pics" class="rk-menu__link">Pics</a></li>
                   <li class="rk-menu__item"><a href="vids" class="rk-menu__link">Vids</a></li>
@@ -110,6 +157,8 @@ $(function () {
               </nav>
             </li>
             <li class="rk-menu__item"><a href="about" class="rk-menu__link">About</a>
+            </li>
+            <li class="rk-menu__item"><a href="blog" class="rk-menu__link">Blog</a>
             </li>
           </ul>
         </nav>
@@ -135,10 +184,15 @@ $(function () {
       
         
       
-            <div class="parallax-viewport" id="parallax" style="position:fixed;min-width:100vw;min-height:66.74vw;left: 50%;top: 50%;transform: translate(-50%, -50%);overflow: hidden;">
+            <div class="parallax-viewport" id="parallax" style="position:fixed;min-width:100vw;min-height:62.5vw;left: 50%;top: 50%;transform: translate(-50%, -50%);overflow: hidden;">
                 
                 
-            <img class="parallax-layer" src="https://c8.staticflickr.com/6/5642/21051349335_dc3c2bb603_k.jpg" alt="" style="position:absolute; width:101%; height:101%;"/>
+            <img class="parallax-layer" src="assets/img/Untitled-5.png" alt="" style="position:absolute; width:102%; height:102%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-4.png" alt="" style="position:absolute; width:98%; height:98%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-3.png" alt="" style="position:absolute; width:94%; height:94%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-2.png" alt="" style="position:absolute; width:90%; height:90%;"/>
+			<img class="parallax-layer" src="assets/img/Untitled-1.png" alt="" style="position:absolute; width:86%; height:86%;"/>
+      
             </div>
         
       
