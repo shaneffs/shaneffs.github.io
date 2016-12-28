@@ -135,10 +135,10 @@ $(function () {
       
         
       
-            <div class="parallax-viewport" id="parallax" style="position:fixed;min-width:100vw;min-height:66.74vw;left: 50%;top: 50%;transform: translate(-50%, -50%);overflow: hidden;">
+            <div class="parallax" data-parallaxify-range-x="30" data-parallaxify-range-y="5" style="position:fixed;min-width:108vw;min-height:66.74vw;overflow:hidden;top:-20%;left:-4%;">
                 
                 
-            <img class="parallax-layer" src="https://c8.staticflickr.com/6/5642/21051349335_dc3c2bb603_k.jpg" alt="" style="position:absolute; width:101%; height:101%;"/>
+            <img class="parallax-layer" src="https://c8.staticflickr.com/6/5642/21051349335_dc3c2bb603_k.jpg" alt="" style="position:absolute;"/>
             </div>
         
       
@@ -154,9 +154,9 @@ $(function () {
       
       
       
-    <footer class="ae-container-fluid rk-footer" style="margin-top:40%;">
+    <footer class="ae-container-fluid rk-footer" style="position:fixed;bottom:3%;">
       <div class="ae-grid ae-grid--collapse">
-        <div class="ae-grid__item item-lg-4 au-xs-ta-center"><a href="https://twitter.com/shaneeefu" class="rk-social-btn ">
+        <div class="ae-grid__item item-lg-3 au-xs-ta-center"><a href="https://twitter.com/shaneeefu" class="rk-social-btn ">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
             </svg></a>
@@ -180,30 +180,22 @@ $(function () {
    <script src="assets/js/flickr.js"></script>
       
       <script>
-      jQuery(document).ready(function(){
-    jQuery('#parallax .parallax-layer')
-    .parallax({
-      mouseport: jQuery('.parallax-layer')
-    });
-  });
-      
-    </script>
-    <script>
-      
-      
-       
-       var cookie = document.cookie;
-if (cookie.indexOf('visited=', 0) == -1) {
-    var expiration = new Date();
-    expiration.setDate(expiration.getDate()+1);
-    document.cookie = 'visited=1;expires=' + expiration + ';path=/';
+$(function(){
+			$(document).ready(function() {
+				$.parallaxify({
+					positionProperty: 'transform',
+					responsive: true,
+					motionType: 'natural',
+					mouseMotionType: 'performance',
+					motionAngleX: 70,
+					motionAngleY: 70,
+					alphaFilter: 0.5,
+					adjustBasePosition: true,
+					alphaPosition: 0.025,
+				});
 
-    var element = document.getElementById('welcome');
-    element.style.display = 'block';
-}
-       
-      
-      
-      </script>
+			});
+		}); // */
+    </script>
   </body>
 </html>
