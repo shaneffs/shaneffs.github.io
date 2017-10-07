@@ -135,16 +135,24 @@ $(function () {
       
         
       
-            <div class="parallax" data-parallaxify-range-x="30" data-parallaxify-range-y="5" style="position:fixed;width:999vh;min-height:124vh;overflow:hidden;top:-20%;left:-4%;">
+           <!-- <div class="parallax" data-parallaxify-range-x="30" data-parallaxify-range-y="5" style="position:fixed;width:999vh;min-height:124vh;overflow:hidden;top:-20%;left:-4%;">
                 
                 
             <img class="parallax-layer" src="https://c8.staticflickr.com/6/5642/21051349335_dc3c2bb603_k.jpg" alt="" style="position:absolute;"/>
-            </div>
+            </div> -->
         
       
       
       
       
+      <div class="background-video" style="position:absolute;overflow:hidden;top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);">
+          <video width="50%" height="auto" style="margin-left:25%" autoplay loop muted>
+  <source src="img/bg.mp4" type="video/webm">
+Your browser does not support the video tag.
+</video>
+      </div>
       
       
       
@@ -153,10 +161,9 @@ $(function () {
       
       
       
-      
-    <footer class="ae-container-fluid rk-footer" style="position:fixed;bottom:3%;">
+    <footer class="ae-container-fluid ae-container-fluid--full rk-footer" style="position:fixed;bottom:0%;">
       <div class="ae-grid ae-grid--collapse">
-        <div class="ae-grid__item item-lg-3 au-xs-ta-center"><a href="https://twitter.com/shaneeefu" class="rk-social-btn ">
+        <div class="ae-grid__item item-lg-12 au-xs-ta-center"><a href="https://twitter.com/shaneeefu" class="rk-social-btn ">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
             </svg></a>
@@ -168,8 +175,8 @@ $(function () {
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
             </svg></a></div>
-        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-          <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:shanef@foxmail.com" class="rk-dark-color ">shanef@foxmail.com </a></span></p>
+        <div class="ae-grid__item item-lg-12 au-xs-ta-center">
+          <p class="rk-footer__text rk-footer__contact"><span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:shanef@foxmail.com" class="rk-dark-color ">shanef@foxmail.com </a></span></p>
         </div>
       </div>
     </footer>
