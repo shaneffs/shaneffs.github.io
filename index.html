@@ -145,13 +145,17 @@ $(function () {
       
       
       
-      <div class="background-video" style="position:absolute;overflow:hidden;top: 50%;
+      <div class="ae-container-fluid ae-container-fluid--full" style="position:absolute;overflow:hidden;top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);">
-          <video width="65%" height="auto" style="margin-left:17.5%" autoplay loop muted>
+          <div class="ae-grid ae-grid--collapse">
+          <div class="ae-grid__item item-lg-2 item-lg--push-5 item-sm-4 item-sm--push-4 item-xs-12 au-xs-ta-center">
+          <video width="100%" height="auto" autoplay loop muted playsinline>
   <source src="img/bg.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
+              </div>
+          </div>
       </div>
       
       
