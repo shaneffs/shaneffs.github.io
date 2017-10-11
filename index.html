@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Shane Fu</title>
+    <link rel="shortcut icon" href="assets/img/pageicon.png">
+    <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
+    <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Rubik:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <script src="assets/js/jquery-3.0.0.min.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/parallax.js"></script>
+
+
+    <script>
+
+        
+function determineCountry(data){
+   switch(data.address.country_code){
+      case "CN" :
+         
+           
+           
+           function displayOverlay(text) {
+    $("<div id='overlay'><a>" + text + "</a></div>").css({
+        "position": "fixed",
+        "top": "0px",
+        "left": "0px",
+        "width": "100%",
+        "height": "100%",
+        "background-color": "rgba(0, 0, 0, 0.8)",
+        "z-index": "10000",
+        "text-align": "center",
+        "color": "#fff",
+        "font-size": "40px",
+        "font-weight": "bold",
+        "cursor": "pointer",
+    }).appendTo("body");
+};
+
+function removeOverlay() {
+    $("#overlay").fadeOut();
+    setTimeout(function() {
+    $("#overlay").remove();
+        }, 2000);
+};
+
+$(function () {
+    $("body").click(function () {
+        if ($("#overlay").length > 0) {
+            removeOverlay();
+        }
+    });
+    displayOverlay("亲，如果您是从国内访问此网站而且没有VPN的帮助，大部分内容会无法显示。");
+});
+            
+      break;
+   }
+}
+</script>
+<script type="text/javascript" src="http://api.wipmania.com/jsonp?callback=determineCountry"></script>
+      
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61554128-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+      
+  </head>
+  <body class="top-fixed">
+      
+      
+      
+      
+      
+    <header class="ae-container-fluid ae-container-fluid--full rk-header" style="background-color:rgba(255, 255, 255, 0.5)">
+      <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
+      <label for="mobile-menu">
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+        <svg>
+          <use xlink:href="assets/img/symbols.svg#bar"></use>
+        </svg>
+      </label>
+      <div class="ae-container-fluid rk-topbar">
+        <h1 class="rk-logo"><a href="about">SHANE FU</a></h1>
+        <nav class="rk-navigation">
+          <ul class="rk-menu">
+            <li class="active rk-menu__item"><a href="index" class="rk-menu__link">Home</a>
+            </li>
+            <li class="rk-menu__item"><a href="pics" class="rk-menu__link">Works</a>
+              <nav class="rk-menu__sub"  style="background-color:rgba(255, 255, 255, 0.5)">
+                <ul class="rk-container">
+                  <li class="rk-menu__item"><a href="/pics" class="rk-menu__link" style="z-index:10;">Pics</a></li>
+                  <li class="rk-menu__item"><a href="/vids" class="rk-menu__link" style="z-index:10;">Vids</a></li>
+                  <li class="rk-menu__item"><a href="/projects" class="rk-menu__link" style="z-index:10;">Projects</a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="rk-menu__item"><a href="about" class="rk-menu__link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+      
+      
+      
+    <section class="ae-container-fluid rk-main">
+
+        
+        
+        
+        
+      </section>
+        
+        
+        
+      
+      
+      
+      
+      
+        
+      
+           <!-- <div class="parallax" data-parallaxify-range-x="30" data-parallaxify-range-y="5" style="position:fixed;width:999vh;min-height:124vh;overflow:hidden;top:-20%;left:-4%;">
+                
+                
+            <img class="parallax-layer" src="https://c8.staticflickr.com/6/5642/21051349335_dc3c2bb603_k.jpg" alt="" style="position:absolute;"/>
+            </div> -->
+        
+      
+      
+      
+      
+      <div class="ae-container-fluid ae-container-fluid--full" style="position:absolute;overflow:hidden;top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);">
+          <div class="ae-grid ae-grid--collapse">
+          <div class="ae-grid__item item-lg-2 item-lg--push-5 item-sm-4 item-sm--push-4 item-xs-12 au-xs-ta-center">
+          <video width="100%" height="auto" autoplay loop muted playsinline>
+  <source src="img/bg.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+              </div>
+          </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <footer class="ae-container-fluid ae-container-fluid--full rk-footer" style="position:fixed;bottom:0%;">
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-12 au-xs-ta-center"><a href="https://twitter.com/shaneeefu" class="rk-social-btn ">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+            </svg></a>
+            <a href="https://www.flickr.com/photos/shanefu" class="rk-social-btn ">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-flickr"></use>
+            </svg></a>
+            <a href="https://www.instagram.com/shaneffs/" class="rk-social-btn ">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
+            </svg></a></div>
+        <div class="ae-grid__item item-lg-12 au-xs-ta-center">
+          <p class="rk-footer__text rk-footer__contact"><span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="mailto:shanef@foxmail.com" class="rk-dark-color ">shanef@foxmail.com </a></span></p>
+        </div>
+      </div>
+    </footer>
+      
+    <script src="assets/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+      <script src="assets/js/lightbox.js"></script>
+   <script src="assets/js/flickr.js"></script>
+      
+      <script>
+$(function(){
+			$(document).ready(function() {
+				$.parallaxify({
+					positionProperty: 'transform',
+					responsive: true,
+					motionType: 'natural',
+					mouseMotionType: 'performance',
+					motionAngleX: 70,
+					motionAngleY: 70,
+					alphaFilter: 0.5,
+					adjustBasePosition: true,
+					alphaPosition: 0.025,
+				});
+
+			});
+		}); // */
+    </script>
+  </body>
+</html>
